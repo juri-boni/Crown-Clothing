@@ -1,0 +1,28 @@
+import { initializeApp } from "firebase/app";
+
+import {
+  getAuth,
+  signInWithRedirect,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD-Szuo3YNFkmAMkFOFPuZfwoEoc2eohPo",
+  authDomain: "crown-db-v2-55457.firebaseapp.com",
+  projectId: "crown-db-v2-55457",
+  storageBucket: "crown-db-v2-55457.appspot.com",
+  messagingSenderId: "950441835712",
+  appId: "1:950441835712:web:69f337fff2c1f704b6c125",
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  prompt: "select_account",
+});
+
+export const auth = getAuth();
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
