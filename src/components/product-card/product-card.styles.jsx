@@ -23,15 +23,14 @@ export const ProductCardContainer = styled.div`
     display: none;
   }
 
-    &:hover {
-      img {
-        opacity: 0.8;
-      }
+  &:hover {
+    img {
+      opacity: 0.8;
+    }
 
-      button {
-        opacity: 0.85;
-        display: flex;
-      }
+    button {
+      opacity: 0.85;
+      display: flex;
     }
   }
 `;
